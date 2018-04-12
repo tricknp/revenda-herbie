@@ -1,0 +1,24 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class MarcasTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('marcas')->insert(['nome' => 'Fiat']);
+        DB::table('marcas')->insert(['nome' => 'Chevrolet']);
+        DB::table('marcas')->insert(['nome' => 'Renout']);
+        DB::table('marcas')->insert(['nome' => 'Peugeot']);
+        DB::table('marcas')->insert(['nome' => 'Ford']);
+        DB::table('marcas')->insert(['nome' => 'Volkswagen']);
+        DB::table('marcas')->insert(['nome' => 'Honda']);
+        DB::table('marcas')->insert(['nome' => 'Hyundai']);
+
+    }
+}
