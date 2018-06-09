@@ -8,16 +8,16 @@ use Illuminate\Support\Facades\DB;
 class Proposta extends Model
 {
     private $meses = [
-        'January' => 'red',
-        'February' => 'green',
-        'March' => 'blue',
-        'April' => 'black',
-        'May' => 'purple',
-        'June' => 'pink',
-        'July' => 'grey',
-        'August' => 'yellow',
-        'September' => 'orange',
-        'October' => 'marron',
+        'January' => 'blue',
+        'February' => 'red',
+        'March' => 'purple',
+        'April' => 'white',
+        'May' => 'black',
+        'June' => 'orange',
+        'July' => 'green',
+        'August' => 'cyan',
+        'September' => 'pink',
+        'October' => 'black',
         'November' => 'brown',
         'December' => 'moss'
     ];

@@ -50,9 +50,9 @@ class PropostaController extends Controller
         $dados = $request->all();
 
         $inc = Proposta::create($dados);
-
+ 
         if ($inc) {
-            return redirect()->route('carros.viewdestaque')
+            return redirect()->route('carrossite.viewdestaque')
                    ->with('Proposta inserida com sucesso!');   
         }
     }

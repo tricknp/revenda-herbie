@@ -224,4 +224,41 @@ class CarroController extends Controller
         
             return view('admin.propostas_list', compact('propostas'));
     }
+
+    public function ws($id = null){
+        //indica o tipo de retorno do método
+        header("Content-type: application/json; charset=utf-8");
+
+        //verifica se $id não foi passado
+        if($id == null){
+            $retorno = array("situacao" => "url incorreta", 
+                             "modelo" => null,
+                             "ano" => null,
+                             "preco" => null 
+                            );
+        }else{
+            //busca o carro cujo id foi passado por parametro
+            $reg = Carro::find($id);
+
+            //verifica se encontrou o registro
+            if(isset ($reg)){
+                $retorno = array("situacao" => "encontrada",
+                                 "modelo" => $reg->modelo,
+                                 "ano" => $reg->ano,
+                                 "preco" => $reg->preco 
+                                 );
+            }else{
+                $retorno = array("situacao" => "inexistente",
+                                 "modelo" => null,
+                                 "ano" => null,
+                                 "preco" => null 
+                                 );
+            }
+
+        }
+
+        //converte array para o formato json
+        echo json_encode($retorno, JSON_PRETTY_PRINT);
+
+    }
 }

@@ -7,7 +7,7 @@
     </div>    
 
     <div class="col-sm-2">
-        <button class="btn btn-primary">Voltar</button>
+        <a href="{{route('carrossite.index') }}" class="btn btn-primary">Voltar</a
     </div>
     <br>
 
@@ -38,7 +38,7 @@
                                 <br> <br> <br>
                     </div>
                     @empty
-                        <h2>Não há carros com o modelo {{$c->modelo}} registrado</h2>
+                        <h2>Não há carros com o modelo pesuisado</h2>
         @endforelse
     </div>
 @endsection

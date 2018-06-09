@@ -51,7 +51,7 @@
   <br>
 </div>
 
-  <form method="POST" action="{{ url('propostas') }}">    
+  <form method="POST" action="{{ url('propostas') }}">    k
     {{ csrf_field() }}
     <div class="col-sm-12">
       <br>

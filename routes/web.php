@@ -38,7 +38,7 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware' => 'auth'], 
 });
 
 
-Route::group(['namespace' => 'Site', 'prefix'=>'site'], function() {
+Route::group(['namespace' => 'Site'], function() {
     Route::get('carrossite', 'CarroController@index')
         ->name('carrossite.index');
 
@@ -57,3 +57,7 @@ Route::group(['namespace' => 'Site', 'prefix'=>'site'], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/promocao', 'EmailControler@enviaEmail');
+
+Route::get('/carros/{id?}', 'Admin\CarroController@ws');

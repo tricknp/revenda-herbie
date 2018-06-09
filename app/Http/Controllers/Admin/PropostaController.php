@@ -94,7 +94,7 @@ class PropostaController extends Controller
     public function enviarEmail(Request $request){
         $email = $request->email;
 
-        Mail::to('francinemoraes08@hotmail.com')->send(new MailSend());
+        Mail::to('nporto.patrick@gmail.com')->send(new MailSend());
         return redirect ('/admin/carros');
     }
 

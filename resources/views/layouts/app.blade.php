@@ -21,13 +21,13 @@
                 <div class="navbar-header">
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/site') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <strong>
                             Herbie Veiculos
                         </strong>
                     </a>
 
-                    <a class="navbar-brand" href="{{route ('carros.index') }}">
+                    <a class="navbar-brand" href="{{route ('carrossite.index') }}">
                         Meus carros
                     </a>
                     
